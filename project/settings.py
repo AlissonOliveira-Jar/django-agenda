@@ -20,7 +20,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(zxzovhh9c-1#4ei65906s9k9_t)mb*s#@5+ibncu=p$)7d^wc'
+SECRET_KEY = (
+    'django-insecure-(zxzovhh9c-1#4ei65906s9k9_t)mb*s#@5+ibncu=p$)7d^wc'
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -55,9 +57,7 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            BASE_DIR / 'base_templates'  
-        ],
+        'DIRS': [BASE_DIR / 'base_templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,9 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = (
-    BASE_DIR / 'base_static',
-)
+STATICFILES_DIRS = (BASE_DIR / 'base_static',)
 STATIC_ROOT = BASE_DIR / 'static'
 
 MEDIA_URL = 'media/'
