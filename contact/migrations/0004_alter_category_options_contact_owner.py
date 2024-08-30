@@ -8,21 +8,21 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('contact', '0003_category_contact_category'),
+        ("contact", "0003_category_contact_category"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='category',
+            name="category",
             options={
-                'verbose_name': 'Category',
-                'verbose_name_plural': 'Categories',
+                "verbose_name": "Category",
+                "verbose_name_plural": "Categories",
             },
         ),
         migrations.AddField(
-            model_name='contact',
-            name='owner',
+            model_name="contact",
+            name="owner",
             field=models.ForeignKey(
                 blank=True,
                 null=True,
