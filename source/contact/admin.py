@@ -11,7 +11,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(models.Contact)
 class ContactAdmin(admin.ModelAdmin):
-    list_display = "id", "first_name", "last_name", "phone"
+    list_display = "id", "first_name", "last_name", "phone", "show"
     ordering = ("-id",)
     list_filter = ("created_date",)
     search_fields = (
@@ -24,6 +24,7 @@ class ContactAdmin(admin.ModelAdmin):
     list_editable = (
         "first_name",
         "last_name",
+        "show",
     )
     list_display_links = (
         "id",
