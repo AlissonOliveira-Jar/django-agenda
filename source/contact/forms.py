@@ -5,6 +5,8 @@ from .models import Contact
 
 
 class ContactForm(forms.ModelForm):
+    picture = forms.ImageField(widget=forms.FileInput(attrs={"accept": "image/*"}))
+
     class Meta:
         model = Contact
         fields = (
@@ -14,6 +16,7 @@ class ContactForm(forms.ModelForm):
             "email",
             "description",
             "category",
+            "picture",
         )
 
     def clean(self):
